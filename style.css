@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    background-color: #176b3a;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #37e083;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 8%;
+    min-width: 220px;
+    background-color: #176b3a;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 18px;
+    z-index: 5;
+    border-radius: 8px;
+}
+
+nav.mostrar-menu {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 7px 0;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: #5fe3a1;
+}
+
+.menu-botao {
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.tema {
+    background-color: #5fe3a1;
+    color: #0e4d29;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto;
+}
+
+.janela-slider {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagens-slider {
+    display: flex;
+    transition: 0.5s;
+}
+
+.imagens-slider img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#anterior,
+#proximo {
+    background-color: #176b3a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#anterior:hover,
+#proximo:hover {
+    background-color: #0e4d29;
+}
+
+.introducao {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 20px;
+}
+
+.introducao h2 {
+    color: #176b3a;
+    margin-bottom: 8px;
+}
+
+.introducao p {
+    color: #555;
+}
+
+.filtros {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.filtros input,
+.filtros select {
+    padding: 11px;
+    border: 1px solid #bbb;
+    background-color: white;
+    font-size: 14px;
+}
+
+.filtros input {
+    flex: 1;
+}
+
+.filtros select {
+    width: 180px;
+}
+
+.oficinas {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 15px;
+}
+
+.card h3 {
+    color: #176b3a;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.informacao {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.preco {
+    color: #176b3a;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.botao {
+    padding: 10px;
+    background-color: #176b3a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.botao:hover {
+    background-color: #0e4d29;
+}
+
+.card .botao {
+    width: 100%;
+}
+
+.mensagem {
+    grid-column: 1 / -1;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 25px;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    background-color: #176b3a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.pagina-inscricoes {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto 50px;
+}
+
+.pagina-inscricoes h1,
+.conta h1 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.lista-inscricoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inscricao {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-left: 5px solid #176b3a;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.inscricao h3 {
+    color: #176b3a;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.inscricao p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.remover {
+    background-color: #c62828;
+}
+
+.remover:hover,
+.confirmar:hover {
+    background-color: #a51f1f;
+}
+
+.total {
+    background-color: #176b3a;
+    color: white;
+    padding: 16px 20px;
+    margin-top: 18px;
+    text-align: right;
+}
+
+.total p {
+    margin-bottom: 5px;
+}
+
+.total strong {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #176b3a;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.voltar:hover {
+    background-color: #0e4d29;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal.mostrar {
+    display: flex;
+}
+
+.modal-conteudo {
+    width: 90%;
+    max-width: 430px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.modal-conteudo h2 {
+    color: #176b3a;
+    margin-bottom: 12px;
+}
+
+.botoes-modal {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancelar {
+    background-color: #777;
+}
+
+.confirmar {
+    background-color: #c62828;
+}
+
+.conta {
+    width: 90%;
+    max-width: 700px;
+    margin: 35px auto 50px;
+}
+
+.conta form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.conta label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.conta input {
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.conta small {
+    min-height: 18px;
+}
+
+.valido {
+    color: #16833b;
+}
+
+.invalido {
+    color: #c62828;
+}
+
+.campo-senha {
+    display: flex;
+    gap: 8px;
+}
+
+.campo-senha input {
+    flex: 1;
+}
+
+.salvar {
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+.aviso {
+    display: none;
+    margin-top: 18px;
+    padding: 12px;
+    background-color: #dff3e4;
+    color: #176b3a;
+    border-radius: 7px;
+}
+
+.mostrar-aviso {
+    display: block;
+}
+
+.perfil {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+.perfil h2 {
+    color: #176b3a;
+    margin-bottom: 18px;
+}
+
+.perfil-imagem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#imagem-principal {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 8px;
+}
+
+.miniaturas img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.miniaturas img:hover {
+    border-color: #176b3a;
+}
+
+.dados-perfil {
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dados-perfil p {
+    margin-bottom: 8px;
+}
+
+.escuro {
+    background-color: #171717;
+    color: #eee;
+}
+
+.escuro .introducao p,
+.escuro .informacao,
+.escuro .inscricao p {
+    color: #ccc;
+}
+
+.escuro .introducao h2,
+.escuro .pagina-inscricoes h1,
+.escuro .conta h1,
+.escuro .perfil h2,
+.escuro .card h3,
+.escuro .inscricao h3,
+.escuro .modal-conteudo h2 {
+    color: #5fe3a1;
+}
+
+.escuro .card,
+.escuro .inscricao,
+.escuro .dados-perfil,
+.escuro .modal-conteudo {
+    background-color: #252525;
+    border-color: #444;
+}
+
+.escuro .filtros input,
+.escuro .filtros select,
+.escuro .conta input {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+.escuro .mensagem {
+    background-color: #252525;
+    border-color: #444;
+    color: #ccc;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-botao {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .oficinas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .janela-slider,
+    .imagens-slider img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .slider {
+        gap: 5px;
+    }
+
+    .janela-slider,
+    .imagens-slider img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros select {
+        width: 100%;
+    }
+
+    .oficinas {
+        grid-template-columns: 1fr;
+    }
+
+    .inscricao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total {
+        text-align: left;
+    }
+
+    .voltar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .campo-senha {
+        flex-direction: column;
+    }
+
+    .botoes-modal {
+        flex-direction: column;
+    }
+
+    .botoes-modal .botao {
+        width: 100%;
+    }
+}

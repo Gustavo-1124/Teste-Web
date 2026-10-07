@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Tech 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Semana Tech <span>2026</span></div>
+
+        <button id="menu-botao" class="menu-botao">≡</button>
+
+        <button id="tema" class="tema">Tema ◐</button>
+
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="index.html#oficinas">Oficinas</a>
+            <a href="inscricoes.html">Minhas inscrições (<span id="contador">0</span>)</a>
+            <a href="minha-conta.html">Minha Conta</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="slider">
+            <button id="anterior">◀</button>
+
+            <div class="janela-slider">
+                <div class="imagens-slider">
+
+                    <img src="https://www.ifpb.edu.br/destaques-do-ifpb/estrutura-que-impulsiona-seu-aprendizado/slider-1.png/@@images/image-1920-0beb4933fedd71e984fce81339832004.png">
+
+                    <img src="https://i.ytimg.com/vi/g08WcKOHeK0/maxresdefault.jpg">
+
+                    <img src="https://jornalintegracao.com.br/wp-content/uploads/2025/06/d77fc-robotica-curso-gratuito.jpg?w=1024&h=400&crop=1">
+
+                    <img src="https://fae.edu/galeria/getImage/360/3140101713256760.jpg">
+
+                </div>
+            </div>
+
+            <button id="proximo">▶</button>
+        </div>
+
+        <section class="introducao">
+            <h2>Oficinas disponíveis</h2>
+            <p>Escolha as oficinas que deseja participar na Semana Tech 2026.</p>
+        </section>
+
+        <section class="filtros">
+            <input type="text" id="busca" placeholder="Buscar oficina...">
+
+            <select id="ordenacao">
+                <option value="selecione">Selecione</option>
+                <option value="menor">Menor valor</option>
+                <option value="maior">Maior valor</option>
+            </select>
+        </section>
+
+        <section id="oficinas" class="oficinas"></section>
+
+    </main>
+
+    <footer>
+        <p>Semana Tech 2026 - Tecnologia e inovação - Arthur Lima, Luan e Gustavo</p>
+    </footer>
+
+</body>
+
+</html>

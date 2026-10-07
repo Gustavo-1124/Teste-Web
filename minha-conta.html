@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Semana Tech 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Semana Tech <span>2026</span></div>
+
+        <button id="menu-botao" class="menu-botao">≡</button>
+
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="index.html#oficinas">Oficinas</a>
+            <a href="inscricoes.html">Minhas inscrições (<span id="contador">0</span>)</a>
+            <a href="minha-conta.html">Minha Conta</a>
+        </nav>
+
+        <button id="tema" class="tema">Tema</button>
+    </header>
+
+    <main>
+        <section class="conta">
+            <h1>Área do Participante</h1>
+
+            <form id="form-conta">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+                <small id="nome-mensagem"></small>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <small id="email-mensagem"></small>
+
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" min="1" placeholder="Digite sua idade">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" placeholder="Digite sua cidade">
+
+                <label for="senha">Senha</label>
+                <div class="campo-senha">
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                    <button type="button" id="mostrar-senha" class="botao">Mostrar</button>
+                </div>
+
+                <button type="submit" class="botao salvar">Salvar dados</button>
+            </form>
+
+            <div id="aviso" class="aviso">Dados atualizados com sucesso!</div>
+
+            <section class="perfil">
+                <h2>Meu perfil</h2>
+
+                <div class="perfil-imagem">
+                    <img id="imagem-principal" src="https://img.magnific.com/vetores-premium/icone-de-perfil-de-avatar-padrao-imagem-de-usuario-de-midia-social-icone-de-avatar-cinza-silhueta-de-perfil-em-branco-ilustracao-vetorial_561158-3407.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem de perfil">
+
+                    <div class="miniaturas">
+                        <img src="https://img.magnific.com/vetores-premium/icone-de-perfil-de-avatar-padrao-imagem-de-usuario-de-midia-social-icone-de-avatar-cinza-silhueta-de-perfil-em-branco-ilustracao-vetorial_561158-3407.jpg?semt=ais_hybrid&w=740&q=80" alt="Avatar 1">
+                        <img src="img/luan.jpg" alt="Avatar 2">
+                        <img src="img/arthur.jpeg" alt="Avatar 3">
+                        <img src="img/gustavo.jpeg" alt="Avatar 4">
+                    </div>
+                </div>
+
+                <div class="dados-perfil">
+                    <p>Nome: <span id="perfil-nome">Não informado</span></p>
+                    <p>E-mail: <span id="perfil-email">Não informado</span></p>
+                    <p>Idade: <span id="perfil-idade">Não informada</span></p>
+                    <p>Cidade: <span id="perfil-cidade">Não informada</span></p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Semana Tech 2026 - Tecnologia e inovação - Arthur Lima, Luan e Gustavo</p>
+    </footer>
+</body>
+</html>

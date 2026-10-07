@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas inscrições - Semana Tech 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Semana Tech <span>2026</span></div>
+
+        <button id="menu-botao" class="menu-botao">≡</button>
+
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="index.html#oficinas">Oficinas</a>
+            <a href="inscricoes.html">Minhas inscrições (<span id="contador">0</span>)</a>
+            <a href="minha-conta.html">Minha Conta</a>
+        </nav>
+
+        <button id="tema" class="tema">Tema</button>
+    </header>
+
+    <main>
+        <section class="pagina-inscricoes">
+            <h1>Minhas inscrições</h1>
+
+            <div id="lista-inscricoes" class="lista-inscricoes"></div>
+
+            <div id="total" class="total"></div>
+
+            <a href="index.html" class="voltar">Voltar para oficinas</a>
+        </section>
+    </main>
+
+    <div id="modal-remocao" class="modal">
+        <div class="modal-conteudo">
+            <h2>Confirmar remoção</h2>
+            <p>Deseja realmente remover esta oficina da sua inscrição?</p>
+
+            <div class="botoes-modal">
+                <button id="cancelar-remocao" class="botao cancelar">Cancelar</button>
+                <button id="confirmar-remocao" class="botao confirmar">Confirmar remoção</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Semana Tech 2026 - Tecnologia e inovação - Arthur Lima, Luan e Gustavo</p>
+    </footer>
+</body>
+</html>
